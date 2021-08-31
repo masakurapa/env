@@ -1,7 +1,8 @@
+# load homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # load bash_completion
-if [ -f /usr/local/etc/bash_completion ]; then
-  . /usr/local/etc/bash_completion
-fi
+[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
 
 ##############################
 # env
@@ -23,10 +24,12 @@ export PATH=$GOPATH/bin:$PATH
 # export GOOGLE_APPLICATION_CREDENTIALS=/Users/sakuraba/vscode/gcv/88543-f1ec229afd77.json
 
 # anyenv
-export PATH="$HOME/.anyenv/bin:$PATH"
-eval "$(anyenv init -)"
+#export PATH="$HOME/.anyenv/bin:$PATH"
+#eval "$(anyenv init -)"
 
 # git completion settings
+source /opt/homebrew/Cellar/git/2.33.0/etc/bash_completion.d/git-prompt.sh
+source /opt/homebrew/Cellar/git/2.33.0/etc/bash_completion.d/git-completion.bash
 GIT_PS1_SHOWDIRTYSTATE=true
 export PS1='\[\033[37m\][\[\033[36m\]\u\[\033[37m\] \[\033[32m\]\W\[\033[37m\]]\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ '
 
