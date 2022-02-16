@@ -13,7 +13,7 @@ export NVM_DIR="$HOME/.nvm"
 # env
 ##############################
 # 同じコマンドをhistoryに残さない
-export HISTCONTROL=ignoreboth
+export HISTCONTROL=ignoredups
 # historyにコマンドを実行した時間を表示
 HISTTIMEFORMAT='%Y-%m-%dT%T%z '
 # historyの件数
@@ -36,7 +36,11 @@ export PATH=$GOPATH/bin:$PATH
 source /opt/homebrew/Cellar/git/2.35.1/etc/bash_completion.d/git-prompt.sh
 source /opt/homebrew/Cellar/git/2.35.1/etc/bash_completion.d/git-completion.bash
 GIT_PS1_SHOWDIRTYSTATE=true
+
+# terminal
 export PS1='\[\033[37m\][\[\033[36m\]\u\[\033[37m\] \[\033[32m\]\W\[\033[37m\]]\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ '
+export LSCOLORS=gxfxcxdxbxegedabagacad
+export BASH_SILENCE_DEPRECATION_WARNING=1
 
 # php8.0
 export PATH="/opt/homebrew/opt/php@8.0/bin:$PATH"
@@ -49,4 +53,5 @@ export CPPFLAGS="-I/opt/homebrew/opt/php@8.0/include"
 ###############################
 alias ls="ls -G"
 alias ll="ls -lah"
-alias dkc="docker-compose"
+alias dkc="docker compose"
+alias tmux="tmux -u"
