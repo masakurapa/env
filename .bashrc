@@ -4,6 +4,11 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # load bash_completion
 [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
 
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
 ##############################
 # env
 ##############################
@@ -28,10 +33,16 @@ export PATH=$GOPATH/bin:$PATH
 #eval "$(anyenv init -)"
 
 # git completion settings
-source /opt/homebrew/Cellar/git/2.33.0/etc/bash_completion.d/git-prompt.sh
-source /opt/homebrew/Cellar/git/2.33.0/etc/bash_completion.d/git-completion.bash
+source /opt/homebrew/Cellar/git/2.35.1/etc/bash_completion.d/git-prompt.sh
+source /opt/homebrew/Cellar/git/2.35.1/etc/bash_completion.d/git-completion.bash
 GIT_PS1_SHOWDIRTYSTATE=true
 export PS1='\[\033[37m\][\[\033[36m\]\u\[\033[37m\] \[\033[32m\]\W\[\033[37m\]]\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ '
+
+# php8.0
+export PATH="/opt/homebrew/opt/php@8.0/bin:$PATH"
+export PATH="/opt/homebrew/opt/php@8.0/sbin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/php@8.0/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/php@8.0/include"
 
 ##############################
 # alias
