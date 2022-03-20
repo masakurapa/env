@@ -42,11 +42,17 @@ export PS1='\[\033[37m\][\[\033[36m\]\u\[\033[37m\] \[\033[32m\]\W\[\033[37m\]]\
 export LSCOLORS=gxfxcxdxbxegedabagacad
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
+# php7.4
+export PATH="/opt/homebrew/opt/php@7.4/bin:$PATH"
+export PATH="/opt/homebrew/opt/php@7.4/sbin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/php@7.4/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/php@7.4/include"
+
 # php8.0
-export PATH="/opt/homebrew/opt/php@8.0/bin:$PATH"
-export PATH="/opt/homebrew/opt/php@8.0/sbin:$PATH"
-export LDFLAGS="-L/opt/homebrew/opt/php@8.0/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/php@8.0/include"
+# export PATH="/opt/homebrew/opt/php@8.0/bin:$PATH"
+# export PATH="/opt/homebrew/opt/php@8.0/sbin:$PATH"
+# export LDFLAGS="-L/opt/homebrew/opt/php@8.0/lib"
+# export CPPFLAGS="-I/opt/homebrew/opt/php@8.0/include"
 
 ##############################
 # alias
