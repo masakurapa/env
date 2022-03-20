@@ -19,7 +19,7 @@ HISTTIMEFORMAT='%Y-%m-%dT%T%z '
 # historyの件数
 HISTFILESIZE=1000
 # historyに保存しないコマンド
-HISTIGNORE='history:pwd:ls:ls *:ll'
+HISTIGNORE='history:pwd:ls:ls *:ll:b:d:f:s'
 
 # golang
 export GOPATH=$HOME/go
@@ -61,3 +61,8 @@ alias ls="ls -G"
 alias ll="ls -lah"
 alias dkc="docker compose"
 alias tmux="tmux -u"
+
+alias b="git branch"
+alias d="git diff"
+alias f="git fetch -p"
+alias s="git status"
