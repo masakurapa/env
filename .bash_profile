@@ -1,3 +1,3 @@
 if [ -f ~/repos/env/.bashrc ]; then
-    ~/repos/env/.bashrc
+   source ~/repos/env/.bashrc
 fi

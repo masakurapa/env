@@ -33,8 +33,8 @@ export PATH=$GOPATH/bin:$PATH
 #eval "$(anyenv init -)"
 
 # git completion settings
-source /opt/homebrew/Cellar/git/2.35.1/etc/bash_completion.d/git-prompt.sh
-source /opt/homebrew/Cellar/git/2.35.1/etc/bash_completion.d/git-completion.bash
+source /opt/homebrew/Cellar/git/2.47.0/etc/bash_completion.d/git-prompt.sh
+source /opt/homebrew/Cellar/git/2.47.0/etc/bash_completion.d/git-completion.bash
 GIT_PS1_SHOWDIRTYSTATE=true
 
 # terminal
@@ -43,10 +43,10 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
 # php7.4
-export PATH="/opt/homebrew/opt/php@7.4/bin:$PATH"
-export PATH="/opt/homebrew/opt/php@7.4/sbin:$PATH"
-export LDFLAGS="-L/opt/homebrew/opt/php@7.4/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/php@7.4/include"
+#export PATH="/opt/homebrew/opt/php@7.4/bin:$PATH"
+#export PATH="/opt/homebrew/opt/php@7.4/sbin:$PATH"
+#export LDFLAGS="-L/opt/homebrew/opt/php@7.4/lib"
+#export CPPFLAGS="-I/opt/homebrew/opt/php@7.4/include"
 
 # php8.0
 # export PATH="/opt/homebrew/opt/php@8.0/bin:$PATH"
